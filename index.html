@@ -6,35 +6,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cálculo atividade JS</title>
     <script src="js/script.js"></script>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #1100ff;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .funcao {
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #bf00ff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+        margin-top: 0;
+    }
+
+    input {
+        padding: 5px;
+        border: 1px solid #ae00ff;
+        border-radius: 3px;
+    }
+
+    button {
+        padding: 8px 15px;
+        background-color: #00ff08;
+        color: #78009d;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    p {
+        margin-top: 10px;
+    }
+</style>
 </head>
 <body>
 
-    <h1>Cálculo atividade JS</h1>
-    <button onclick="calcularAreaCirculo()">Calcular Área do Círculo</button>
-    <button onclick="calcularHipotenusa()">Calcular Hipotenusa</button>
-    <button onclick="converterParaDolar()">Converter para Dólar</button>
-    <button onclick="calcularMedia()">Calcular Média</button>
-    <div id="resultado"></div>
-    <label for="nota1">Nota 1:</label>
-    <input type="number" id="nota1"><br><br>
-    <label for="nota2">Nota 2:</label>
-    <input type="number" id="nota2"><br><br>
-    <label for="nota3">Nota 3:</label>
-    <input type="number" id="nota3">
-    <p id="resultado"></p>
-    <label for="valorA">Valor de a:</label>
-    <input type="number" id="valorA"><br><br>
-    <label for="valorB">Valor de b:</label>
-    <input type="number" id="valorB"><br><br>
-    <label for="valorC">Valor de c:</label>
-    <input type="number" id="valorC"><br><br>
-    <button onclick="calcularRaizes()">Calcular Raízes</button><br><br>
-    <p id="resultado"></p>
-    <label for="celsius">Temperatura em Celsius:</label>
-    <input type="number" id="celsius"><br><br>
-    <button onclick="converterTemperatura()">Converter</button><br><br>
-    <p id="resultado"></p>
+    <div class="funcao">
+        <h3>Área do Círculo</h3>
+        <input type="number" id="raioInput">
+        <button onclick="calcularAreaCirculo()">Calcular</button>
+        <p id="areaCirculoOutput"></p>
+    </div>
 
+    <div class="funcao">
+        <h3>Área do Retângulo</h3>
+        <input type="number" id="baseInput">
+        <input type="number" id="alturaInput">
+        <button onclick="calcularAreaRetangulo()">Calcular</button>
+        <p id="areaRetanguloOutput"></p>
+    </div>
+
+    <div class="funcao">
+        <h3>Área do Triângulo</h3>
+        <input type="number" id="baseTrianguloInput">
+        <input type="number" id="alturaTrianguloInput">
+        <button onclick="calcularAreaTriangulo()">Calcular</button>
+        <p id="areaTrianguloOutput"></p>
+    </div>
+
+    <div class="funcao">
+        <h3>Hipotenusa</h3>
+        <input type="number" id="cateto1Input">
+        <input type="number" id="cateto2Input">
+        <button onclick="calcularHipotenusa()">Calcular</button>
+        <p id="hipotenusaOutput"></p>
+    </div>
+
+    <div class="funcao">
+        <h3>Bhaskara</h3>
+        <input type="number" id="aInput">
+        <input type="number" id="bInput">
+        <input type="number" id="cInput">
+        <button onclick="calcularBhaskara()">Calcular</button>
+        <p id="bhaskaraOutput"></p>
+    </div>
+
+    <div class="funcao">
+        <h3>Conversão de Moedas (Reais para Dólares)</h3>
+        <input type="number" id="reaisInput">
+        <button onclick="converterMoedas()">Converter</button>
+        <p id="moedasOutput"></p>
+    </div>
+
+    <div class="funcao">
+        <h3>Conversão de Temperatura (Celsius para Fahrenheit)</h3>
+        <input type="number" id="celsiusInput">
+        <button onclick="converterTemperatura()">Converter</button>
+        <p id="temperaturaOutput"></p>
+    </div>
+
+    <div class="funcao">
+        <h3>Conversão de Velocidade (KM/H para M/S)</h3>
+        <input type="number" id="kmhInput">
+        <button onclick="converterVelocidade()">Converter</button>
+        <p id="velocidadeOutput"></p>
+    </div>
+
+    <div class="funcao">
+        <h3>Média Aritmética entre 3 notas</h3>
+        <input type="number" id="nota1Input">
+        <input type="number" id="nota2Input">
+        <input type="number" id="nota3Input">
+        <button onclick="calcularMedia()">Calcular a Média</button>
+        <p id="mediaOutput"></p>
+    </div>
 
 <html>
 <head>
