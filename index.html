@@ -44,6 +44,19 @@
     p {
         margin-top: 10px;
     }
+    .cotacaoDolar {
+        font-size: 12px;
+        text-align: right;
+        margin-top: 10px;
+        color: #888;
+    }
+    .cotacaoReal {
+        font-size: 12px;
+        text-align: right;
+        margin-top: 10px;
+        color: #888;
+    }
+</style>
 </style>
 </head>
 <body>
@@ -93,6 +106,8 @@
         <input type="number" id="reaisInput" placeholder="Digite um valor">
         <button onclick="converterMoedas()">Converter</button>
         <p id="moedasOutput"></p>
+        <div class="cotacaoReal">Cotação do Real: R$0.20 Dólar Americano</div>
+        <div class="cotacaoDolar">Cotação do Dólar: R$4.95</div>
     </div>
 
     <div class="funcao">
